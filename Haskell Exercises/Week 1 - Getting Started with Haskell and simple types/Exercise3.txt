@@ -1,0 +1,9 @@
+Banana - Value
+Offer Tue (Just Orange) - Value
+not (not False) - Expression
+4 + 5 - Expression
+area (Circle 6) - Expression
+Square (7 + 2) - Expression
+Square (area (Circle 2)) - Expression
+7.2  - Value
+Circle 7.2 - Value

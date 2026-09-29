@@ -1,0 +1,16 @@
+data BinTreeInt = Leaf Int | Node Int BinTreeInt BinTreeInt
+
+Type is BinTreeInt
+Constructors are Leaf (arity 1) and Node (arity 3)
+
+Which are BinTreeInt?
+Leaf 3 - Yes
+Leaf -3 - Yes
+Leaf (-3) - Yes
+Leaf 3.14 - Yes
+Node 3.14 (Leaf 1) (Leaf 2) - No
+Node 0 (Node 1 (Leaf 2) (Leaf 3)) (Leaf 4) - Yes
+Node 0 (BinTreeInt 1) (BinTreeInt 2) - No
+Node 0 (Node 1 (Leaf 2)) (Leaf 4) - No
+Node (Node 1 (Leaf 2) (Leaf 3)) (Leaf 4) - No
+BinTreeInt Int (Leaf 0) (Leaf 1) - No
