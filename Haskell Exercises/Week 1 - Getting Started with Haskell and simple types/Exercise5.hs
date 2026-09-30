@@ -1,5 +1,5 @@
-data BinTree = Leaf a | Node a BinTree BinTree
+data BinaryTree a = Leaf a | Node a (BinaryTree a) (BinaryTree a)
 
 numberOfLeaves :: BinaryTree a -> Int
-numberOfLeaves(leaf x) = 1
+numberOfLeaves(Leaf x) = 1
 numberOfLeaves(Node x left right) = numberOfLeaves left + numberOfLeaves right
