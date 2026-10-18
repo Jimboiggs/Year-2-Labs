@@ -82,6 +82,7 @@ renderGridRow maze x yCoord =
         cells = map (renderCell maze) rowPoints
 
 renderMaze :: [((Int, Int), (Int, Int))] -> [String]
+renderMaze [] = []
 renderMaze maze = concat [renderGridRow maze x yCoord | yCoord <- [0..y]]
     where
         (x, y) = maxPoint maze
