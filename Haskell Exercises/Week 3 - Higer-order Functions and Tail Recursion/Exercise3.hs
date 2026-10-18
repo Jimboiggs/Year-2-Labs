@@ -15,5 +15,5 @@ twoGrids (x:xs) (y:ys) = hJoin x y : twoGrids xs ys
 
 hJoinGrids :: [Grid a] -> Grid a
 hJoinGrids [] = []
-hJoinGrids [x] = [x]
-hJoinGrids (x: y : xys) = twoGrids x y ++ hJoinGrids (y:xys)
+hJoinGrids [x] = x
+hJoinGrids (x: y : xys) = hJoinGrids ((twoGrids x y) : xys)
